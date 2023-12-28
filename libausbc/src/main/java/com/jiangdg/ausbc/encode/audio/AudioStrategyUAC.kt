@@ -95,9 +95,9 @@ class AudioStrategyUAC(private val ctrlBlock: USBMonitor.UsbControlBlock): IAudi
     }
 
     override fun getChannelConfig(): Int = if (getChannelCount() == CHANNEL_COUNT) {
-        AudioFormat.CHANNEL_IN_MONO
+        AudioFormat.CHANNEL_OUT_MONO
     } else {
-        AudioFormat.CHANNEL_IN_STEREO
+        AudioFormat.CHANNEL_OUT_STEREO
     }
 
     companion object {
